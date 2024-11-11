@@ -28,7 +28,7 @@ Host containerized apps using Docker Compose with Nginx
 ## Run
 - Generate the Nginx conf: 
     ```sh
-    ./scripts/generate_conf.sh
+    ./scripts/generate_conf/generate_conf.sh
     ``` 
 - Edit the generated conf in `nginx/conf` to suit your needs - by default there will be a landing page served from `nginx/html` and apps will be served at `/[service name]`
 - Start Docker Compose:

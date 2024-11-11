@@ -4,4 +4,4 @@ nginx/html/.well-known
 nginx/letsencrypt
 .DS_Store
 *.pyc
-scripts/generate_conf_py/venv
+scripts/generate_conf/venv
