@@ -9,7 +9,7 @@
 - Pull the repositories you'd like to run
 - Add these services to `docker-compose.yml`
 - Create `.env` based on `.env.example`
-- `./scripts/generate_conf.sh` to update the nginx confs.
+- `./scripts/generate_conf.sh` to generate the nginx conf.
 
 # For HTTPS:
 
