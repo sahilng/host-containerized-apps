@@ -6,7 +6,7 @@ Use this template to host multiple Docker containers using Docker Compose with N
 ## Requirements
 
 - [Docker](https://docs.docker.com/engine/install/)
-- [Docker Compose](https://docs.docker.com/compose/install/)
+- [Docker Compose](https://docs.docker.com/compose/install/linux/)
 - Python 3.x
 - A Linux machine capable of running the above (recommended resources: 2 CPU, 4GB RAM)
 
