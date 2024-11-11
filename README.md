@@ -14,7 +14,7 @@ Use this template to host multiple Docker containers using Docker Compose with N
 ## Setup
 
 - Remove the example app directories `app1` and `app2` as well as the corresponding services from `docker-compose.yml`
-- Pull app repositories if the images are not available in a registry
+- Pull app repositories if their images are not available in a registry
 - Add these repositories/images as services in `docker-compose.yml`
 - Create `.env` based on `.env.example`
 - If using HTTPS
