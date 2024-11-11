@@ -22,7 +22,7 @@ A sample repository for setting up multicontainer routing via Nginx.
 
 ## If using HTTPS
 
-- [Install certbot] (https://certbot.eff.org/instructions?ws=nginx&os=snap)
+- [Install certbot](https://certbot.eff.org/instructions?ws=nginx&os=snap)
 - Setup SSL:
 ```sh
 sudo ./scripts/setup_ssl.sh
