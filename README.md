@@ -17,10 +17,6 @@ Self-host multiple containerized applications using containerized Nginx
 - Pull the repositories you'd like to run
 - Add these services to `docker-compose.yml`
 - Create `.env` based on `.env.example`
-- Generate the Nginx conf: 
-    ```sh
-    ./scripts/generate_conf.sh
-    ``` 
 - If using HTTPS
     - [Install certbot](https://certbot.eff.org/instructions?ws=nginx&os=snap)
     - Setup SSL:
@@ -30,6 +26,10 @@ Self-host multiple containerized applications using containerized Nginx
 
 
 ## Run
+- Generate the Nginx conf: 
+    ```sh
+    ./scripts/generate_conf.sh
+    ``` 
 - Edit the generated conf in `nginx/conf` to suit your needs - by default there will be a landing page served from `nginx/html` and apps will be served at `/[service name]`
 - Start Docker Compose:
     ```sh
