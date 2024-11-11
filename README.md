@@ -5,7 +5,8 @@ Host containerized apps using Docker Compose with Nginx
 
 ## Requirements
 
-- [Docker](https://docs.docker.com/engine/install/) (follow the [post-installation steps](https://docs.docker.com/engine/install/linux-postinstall/) to ensure your user has access to the docker CLI)
+- [Docker](https://docs.docker.com/engine/install/) 
+    - Follow the [post-installation steps](https://docs.docker.com/engine/install/linux-postinstall/) to ensure your user has access to the docker CLI
 - [Docker Compose](https://docs.docker.com/compose/install/linux/)
 - Python 3.x
 - A Linux machine capable of running the above (recommended resources: 2 CPU, 4GB RAM)
@@ -15,7 +16,8 @@ Host containerized apps using Docker Compose with Nginx
 
 - Remove the example services from `docker-compose.yml`
 - Pull app repositories if their images are not available in a registry
-- Add these repositories/images as services in `docker-compose.yml` (use the `expose` key to make the service available to Nginx)
+- Add these repositories/images as services in `docker-compose.yml`
+    - Use the `expose` key to make the service available to Nginx
 - Create `.env` based on `.env.example`
 - If using HTTPS
     - [Install certbot](https://certbot.eff.org/instructions?ws=nginx&os=snap)
