@@ -5,8 +5,8 @@ A sample repository for setting up multicontainer routing via Nginx.
 
 ## Requirements
 
-- Docker
-- Docker Compose
+- [Docker](https://docs.docker.com/engine/install/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 - Python 3.x
 
 ## Setup
@@ -22,7 +22,7 @@ A sample repository for setting up multicontainer routing via Nginx.
 
 ## If using HTTPS
 
-- Install certbot
+- [Install certbot] (https://certbot.eff.org/instructions?ws=nginx&os=snap)
 - Setup SSL:
 ```sh
 sudo ./scripts/setup_ssl.sh
