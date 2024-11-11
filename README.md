@@ -21,6 +21,7 @@ Self-host multiple containerized applications using containerized Nginx
 ```sh
 ./scripts/generate_conf.sh
 ``` 
+- Edit the generated conf to suit your needs - by default there will be a landing page served from `nginx/html` and apps will be served at `/[service name]`
 
 
 ## If using HTTPS
