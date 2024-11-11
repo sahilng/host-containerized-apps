@@ -8,6 +8,7 @@ A sample repository for setting up multicontainer routing via Nginx.
 - [Docker](https://docs.docker.com/engine/install/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 - Python 3.x
+- A Linux machine capable of running the above
 
 ## Setup
 
