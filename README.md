@@ -6,6 +6,7 @@
 
 # Setup
 
+- Remove the example app directories `app1` and `app2` as well as the corresponding services from `docker-compose.yml`
 - Pull the repositories you'd like to run
 - Add these services to `docker-compose.yml`
 - Create `.env` based on `.env.example`
