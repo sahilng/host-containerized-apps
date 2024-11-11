@@ -1,6 +1,6 @@
 # Host Docker Containers Template
 
-Use this template to self-host multiple containerized applications using containerized Nginx
+Use this template to self-host multiple Docker containers using Docker Compose with Nginx
 
 
 ## Requirements
