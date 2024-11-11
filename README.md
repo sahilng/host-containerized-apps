@@ -10,12 +10,12 @@
 - Pull the repositories you'd like to run
 - Add these services to `docker-compose.yml`
 - Create `.env` based on `.env.example`
-- `./scripts/generate_conf.sh` to generate the nginx conf.
+- ```./scripts/generate_conf.sh``` to generate the nginx conf.
 
 # If using HTTPS
 
 - Install certbot
-- `sudo ./scripts/setup_ssl.sh`
+- ```sudo ./scripts/setup_ssl.sh```
 
 # Run
 
@@ -23,8 +23,8 @@
 
 # Autodeploy (optional, untested)
 
-`crontab -e`
+```crontab -e```
 
 Then add the following line to run the script every minute:
 
-`* * * * * ./scripts/poll_and_deploy.sh >> ./scripts/poll_and_deploy.log 2>&1`
+```* * * * * ./scripts/poll_and_deploy.sh >> ./scripts/poll_and_deploy.log 2>&1```
