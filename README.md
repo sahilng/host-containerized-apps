@@ -13,7 +13,7 @@ Host containerized apps using Docker Compose with Nginx
 
 ## Setup
 
-- Remove the example app services from `docker-compose.yml`
+- Remove the example services from `docker-compose.yml`
 - Pull app repositories if their images are not available in a registry
 - Add these repositories/images as services in `docker-compose.yml`
 - Create `.env` based on `.env.example`
