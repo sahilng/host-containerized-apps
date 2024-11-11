@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Accept the docker path as the first argument and set it in PATH
+DOCKER_PATH="$1"
+export PATH="$DOCKER_PATH:$PATH"
+
 # Function to print messages with current date and time in Eastern Time as a prefix
 log() {
     echo "$(TZ="America/New_York" date '+%Y-%m-%d %H:%M:%S') - $1"

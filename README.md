@@ -40,5 +40,5 @@ Host containerized apps using Docker Compose with Nginx
 ## Autodeploy (optional, untested)
 
 ```sh
-(crontab -l; echo "* * * * * cd $(pwd)/scripts/autodeploy && ./autodeploy.sh >> autodeploy.log 2>&1 && cd ../../") | crontab -
+(crontab -l; echo "* * * * * cd $(pwd)/scripts/autodeploy && ./autodeploy.sh $(which docker | xargs dirname) >> autodeploy.log 2>&1 && cd ../../") | crontab -
 ```
