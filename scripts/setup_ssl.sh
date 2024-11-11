@@ -24,9 +24,6 @@ if [ -z "$DOMAIN" ] || [ -z "$EMAIL" ]; then
   exit 1
 fi
 
-echo "Creating https.conf..."
-./scripts/generate_conf.py
-
 echo "Setting webroot and certificate paths..."
 WEBROOT_PATH="$(pwd)/nginx/html"  # Path to the webroot folder
 CERT_PATH="$(pwd)/nginx/letsencrypt"  # Path to save certificates
