@@ -19,3 +19,11 @@
 # Run
 
 `docker compose up -d`
+
+# Autodeploy (optional, untested)
+
+`crontab -e`
+
+Then add the following line to run the script every minute:
+
+`* * * * * ./scripts/poll_and_deploy.sh >> ./scripts/poll_and_deploy.log 2>&1`
