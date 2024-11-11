@@ -6,9 +6,9 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/conf/${ENVIRONMENT}.conf:/etc/nginx/conf.d/default.conf  # Use as the final config file
+      - ./nginx/conf/${ENVIRONMENT}.conf:/etc/nginx/conf.d/default.conf
       - ./nginx/html:/var/www/html
-      - ./nginx/letsencrypt:/etc/letsencrypt  # Mount for SSL certificates
+      - ./nginx/letsencrypt:/etc/letsencrypt
     depends_on:
       - app1
       - app2
