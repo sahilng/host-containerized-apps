@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def generate_nginx_conf(env, domain, compose_file="docker-compose.yml"):
-    output_file=f"./nginx/conf/{env}.generated.conf"
+    output_file=f"./nginx/conf/{env}.conf"
 
     # Load Docker Compose file
     with open(compose_file, 'r') as f:
