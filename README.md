@@ -15,7 +15,7 @@ Host containerized apps using Docker Compose with Nginx
 
 - Remove the example services from `docker-compose.yml`
 - Pull app repositories if their images are not available in a registry
-- Add these repositories/images as services in `docker-compose.yml`
+- Add these repositories/images as services in `docker-compose.yml` (use the `expose` key to make the service available to Nginx)
 - Create `.env` based on `.env.example`
 - If using HTTPS
     - [Install certbot](https://certbot.eff.org/instructions?ws=nginx&os=snap)
