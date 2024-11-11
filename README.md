@@ -1,4 +1,4 @@
-# Docker Host Setup
+# Docker Host Setup Template
 
 Self-host multiple containerized applications using containerized Nginx
 
