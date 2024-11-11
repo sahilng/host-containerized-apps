@@ -1,6 +1,6 @@
-# Host Docker Containers Template
+# Host Docker Containers
 
-Use this template to host multiple Docker containers using Docker Compose with Nginx
+Host multiple Docker containers using Docker Compose with Nginx
 
 
 ## Requirements
