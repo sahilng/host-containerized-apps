@@ -1,6 +1,6 @@
 # Host Containerized Apps
 
-Host multiple containerized apps using Docker Compose with Nginx
+Host containerized apps using Docker Compose with Nginx
 
 
 ## Requirements
