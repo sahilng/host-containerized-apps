@@ -30,7 +30,7 @@ Self-host multiple containerized applications using containerized Nginx
 
 
 ## Run
-- Edit the generated conf to suit your needs - by default there will be a landing page served from `nginx/html` and apps will be served at `/[service name]`
+- Edit the generated conf in `nginx/conf` to suit your needs - by default there will be a landing page served from `nginx/html` and apps will be served at `/[service name]`
 - Start Docker Compose:
     ```sh
     docker compose up -d
