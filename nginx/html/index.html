@@ -23,31 +23,12 @@
             margin-bottom: 20px;
         }
 
-        label {
-            font-size: 1.1em;
-            color: #555;
-        }
-
-        input[type="text"] {
-            padding: 8px;
-            font-size: 1em;
-            width: 200px;
-            margin-top: 10px;
-        }
 
         a {
             text-decoration: none;
             font-weight: bold;
             display: block;
             margin-top: 10px;
-        }
-
-        #linkApp1 {
-            color: blue;
-        }
-
-        #linkApp2 {
-            color: green;
         }
 
         .container {
@@ -60,40 +41,13 @@
 <body>
 
     <div class="container">
-        <h1>Welcome</h1>
-        
-        <!-- Input field to capture user input -->
-        <label for="inputValue">Name:</label>
-        <input type="text" id="inputValue" autofocus>
-        
-        <br><br>
+        <h1>Host Containerized Apps</h1>
 
         <!-- Links to app1 and app2 with JavaScript to append input -->
-        <a href="#" id="linkApp1">Go to app1</a>
-        <a href="#" id="linkApp2">Go to app2</a>
+        <a href="/example-app-1">example app 1</a>
+        <a href="/example-app-2">example app 2</a>
     </div>
 
-    <script>
-        // Function to append input value to link
-        function appendInputToLink(linkId, basePath) {
-            const inputValue = document.getElementById('inputValue').value;
-            const link = document.getElementById(linkId);
-            link.href = `${basePath}/${inputValue}`;
-        }
-
-        // Event listeners to handle click for each link
-        document.getElementById('linkApp1').addEventListener('click', function(event) {
-            event.preventDefault();
-            appendInputToLink('linkApp1', '/app1');
-            window.location.href = document.getElementById('linkApp1').href;
-        });
-
-        document.getElementById('linkApp2').addEventListener('click', function(event) {
-            event.preventDefault();
-            appendInputToLink('linkApp2', '/app2');
-            window.location.href = document.getElementById('linkApp2').href;
-        });
-    </script>
 
 </body>
 </html>
