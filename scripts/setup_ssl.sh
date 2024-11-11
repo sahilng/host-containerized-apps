@@ -25,7 +25,7 @@ if [ -z "$DOMAIN" ] || [ -z "$EMAIL" ]; then
 fi
 
 echo "Creating https.conf..."
-sed 's|\[DOMAIN\]|'"$DOMAIN"'|g' $(pwd)/nginx/conf/https.conf.template > $(pwd)/nginx/conf/https.conf
+./scripts/generate_conf.py
 
 echo "Setting webroot and certificate paths..."
 WEBROOT_PATH="$(pwd)/nginx/html"  # Path to the webroot folder
