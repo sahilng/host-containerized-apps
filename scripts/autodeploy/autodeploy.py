@@ -2,8 +2,8 @@ import os
 import subprocess
 import yaml
 
-# Path to the Docker Compose file
-COMPOSE_FILE = "docker-compose.yml"  # Replace with the actual path
+# Path to the Docker Compose file two levels up
+COMPOSE_FILE = os.path.join(os.path.dirname(__file__), "../../docker-compose.yml")
 
 def run_command(command, cwd=None):
     """Runs a shell command and returns the output."""
@@ -47,6 +47,8 @@ def main():
         image = service_config.get("image")
 
         if build_context:
+            # Resolve path relative to COMPOSE_FILE's directory
+            build_context = os.path.abspath(os.path.join(os.path.dirname(COMPOSE_FILE), build_context))
             # Update local service if it's built from a local context
             update_local_service(build_context, service_name)
         elif image:
