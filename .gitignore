@@ -5,3 +5,5 @@ nginx/letsencrypt
 .DS_Store
 *.pyc
 scripts/generate_conf/venv
+*.log
+scripts/autodeploy/venv
