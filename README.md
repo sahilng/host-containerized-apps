@@ -1,6 +1,6 @@
-# Testing Docker Host Setup
+# Docker Host Setup
 
-A sample repository for setting up multicontainer routing via Nginx.
+Self-host multiple containerized applications using containerized Nginx
 
 
 ## Requirements
@@ -9,6 +9,7 @@ A sample repository for setting up multicontainer routing via Nginx.
 - [Docker Compose](https://docs.docker.com/compose/install/)
 - Python 3.x
 - A Linux machine capable of running the above
+
 
 ## Setup
 
@@ -21,6 +22,7 @@ A sample repository for setting up multicontainer routing via Nginx.
 ./scripts/generate_conf.sh
 ``` 
 
+
 ## If using HTTPS
 
 - [Install certbot](https://certbot.eff.org/instructions?ws=nginx&os=snap)
@@ -29,11 +31,13 @@ A sample repository for setting up multicontainer routing via Nginx.
 sudo ./scripts/setup_ssl.sh
 ```
 
+
 ## Run
 
 ```sh
 docker compose up -d
 ```
+
 
 ## Autodeploy (optional, untested)
 
