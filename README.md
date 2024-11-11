@@ -11,7 +11,7 @@
 - Create `.env` based on `.env.example`
 - `./scripts/generate_conf.sh` to generate the nginx conf.
 
-# For HTTPS:
+# For HTTPS (optional)
 
 - Install certbot
 - `sudo ./scripts/setup_ssl.sh`
