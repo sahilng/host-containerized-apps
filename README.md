@@ -4,8 +4,8 @@ Install Docker and Docker Compose
 
 # For HTTPS:
 
-- Create `.env` based on `.env.example`
 - Install certbot
+- Create `.env` based on `.env.example`
 - `sudo ./scripts/setup_ssl.sh`
 
 # Run
