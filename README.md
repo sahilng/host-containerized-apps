@@ -40,11 +40,5 @@ Host containerized apps using Docker Compose with Nginx
 ## Autodeploy (optional, untested)
 
 ```sh
-crontab -e
-```
-
-Then add the following line to run the script every minute:
-
-```sh
-* * * * * ./scripts/autodeploy/autodeploy.sh >> ./scripts/autodeploy/autodeploy.log 2>&1
+(crontab -l; echo "* * * * * cd $(pwd)/scripts/autodeploy && ./autodeploy.sh >> autodeploy.log 2>&1") | crontab -
 ```
