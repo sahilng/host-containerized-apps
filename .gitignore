@@ -1,0 +1,6 @@
+.env
+nginx/conf/https.conf
+nginx/html/.well-known
+nginx/letsencrypt
+.DS_Store
+*.pyc

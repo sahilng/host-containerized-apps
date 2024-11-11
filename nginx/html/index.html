@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        /* Inline CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 1em;
+            width: 200px;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        #linkApp1 {
+            color: blue;
+        }
+
+        #linkApp2 {
+            color: green;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome</h1>
+        
+        <!-- Input field to capture user input -->
+        <label for="inputValue">Name:</label>
+        <input type="text" id="inputValue" autofocus>
+        
+        <br><br>
+
+        <!-- Links to app1 and app2 with JavaScript to append input -->
+        <a href="#" id="linkApp1">Go to app1</a>
+        <a href="#" id="linkApp2">Go to app2</a>
+    </div>
+
+    <script>
+        // Function to append input value to link
+        function appendInputToLink(linkId, basePath) {
+            const inputValue = document.getElementById('inputValue').value;
+            const link = document.getElementById(linkId);
+            link.href = `${basePath}/${inputValue}`;
+        }
+
+        // Event listeners to handle click for each link
+        document.getElementById('linkApp1').addEventListener('click', function(event) {
+            event.preventDefault();
+            appendInputToLink('linkApp1', '/app1');
+            window.location.href = document.getElementById('linkApp1').href;
+        });
+
+        document.getElementById('linkApp2').addEventListener('click', function(event) {
+            event.preventDefault();
+            appendInputToLink('linkApp2', '/app2');
+            window.location.href = document.getElementById('linkApp2').href;
+        });
+    </script>
+
+</body>
+</html>
