@@ -5,7 +5,7 @@ Host containerized apps using Docker Compose with Nginx
 
 ## Requirements
 
-- [Docker](https://docs.docker.com/engine/install/)
+- [Docker](https://docs.docker.com/engine/install/) (follow the [post-installation steps](https://docs.docker.com/engine/install/linux-postinstall/) to ensure your user has access to the docker CLI)
 - [Docker Compose](https://docs.docker.com/compose/install/linux/)
 - Python 3.x
 - A Linux machine capable of running the above (recommended resources: 2 CPU, 4GB RAM)
