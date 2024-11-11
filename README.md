@@ -1,10 +1,15 @@
-# Requirements
+# Testing Docker Host Setup
+
+A sample repository for setting up multicontainer routing via Nginx.
+
+
+## Requirements
 
 - Docker
 - Docker Compose
 - Python 3.x
 
-# Setup
+## Setup
 
 - Remove the example app directories `app1` and `app2` as well as the corresponding services from `docker-compose.yml`
 - Pull the repositories you'd like to run
@@ -15,7 +20,7 @@
 ./scripts/generate_conf.sh
 ``` 
 
-# If using HTTPS
+## If using HTTPS
 
 - Install certbot
 - Setup SSL:
@@ -23,13 +28,13 @@
 sudo ./scripts/setup_ssl.sh
 ```
 
-# Run
+## Run
 
 ```sh
 docker compose up -d
 ```
 
-# Autodeploy (optional, untested)
+## Autodeploy (optional, untested)
 
 ```sh
 crontab -e
