@@ -13,6 +13,7 @@ services:
   
   example-app-1:
     image: sahilng/http-parrot
+    platform: ${DOCKER_DEFAULT_PLATFORM}
     expose:
       - "8080"
     environment:
@@ -21,6 +22,7 @@ services:
 
   example-app-2:
     image: sahilng/http-parrot
+    platform: ${DOCKER_DEFAULT_PLATFORM}
     expose:
       - "8080"
     environment:
