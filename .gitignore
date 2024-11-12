@@ -7,3 +7,4 @@ nginx/letsencrypt
 scripts/generate_conf/venv
 *.log
 scripts/autodeploy/venv
+*.htpasswd
