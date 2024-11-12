@@ -20,6 +20,7 @@ Host containerized apps using Docker Compose with Nginx
 - Add these repositories/images as services in `docker-compose.yml`
     - Use the `expose` key to make the service available to Nginx
 - Create `.env` based on `.env.example`
+- For Basic Auth, add `[service name].htpasswd` files to `nginx/basic-auth`
 - If using HTTPS
     - [Install certbot](https://certbot.eff.org/instructions?ws=nginx&os=snap)
     - Setup SSL:
