@@ -9,6 +9,7 @@ services:
       - ./nginx/conf/${ENVIRONMENT}.conf:/etc/nginx/conf.d/default.conf
       - ./nginx/html:/var/www/html
       - ./nginx/letsencrypt:/etc/letsencrypt
+      - ./nginx/basic-auth:/etc/nginx/basic-auth
   
   example-app-1:
     image: sahilng/http-parrot

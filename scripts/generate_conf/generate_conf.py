@@ -1,12 +1,12 @@
-import yaml
 import os
+import yaml
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
 
 def generate_nginx_conf(env, domain, compose_file="docker-compose.yml"):
-    output_file=f"./nginx/conf/{env}.conf"
+    output_file = f"./nginx/conf/{env}.conf"
 
     # Load Docker Compose file
     with open(compose_file, 'r') as f:
@@ -46,7 +46,7 @@ server {{
         index index.html;
         try_files $uri $uri/ =404;
     }}
-"""
+    """
     else:
         conf = f"""server {{
     listen 80;
@@ -57,25 +57,42 @@ server {{
         index index.html;
         try_files $uri $uri/ =404;
     }}
-"""
+    """
 
     # Add proxy configuration for each app with an exposed port
     for app_name, port in apps.items():
-        conf += f"""
-    # Proxy /{app_name} to {app_name} Flask app
-    location /{app_name}/ {{
-        rewrite ^/{app_name}/(.*)$ /$1 break;  # Strip /{app_name} prefix
-        proxy_pass http://{app_name}:{port};
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }}
-"""
+        # Initialize the location block lines
+        location_lines = [
+            f"    # Proxy /{app_name} to {app_name}",
+            f"    location /{app_name}/ {{"
+        ]
+
+        # Check if htpasswd file exists for this app
+        htpasswd_file = f"./nginx/basic-auth/{app_name}.htpasswd"
+        if os.path.exists(htpasswd_file):
+            # Add basic auth directives
+            location_lines.append(f"        auth_basic \"Restricted Area\";")
+            location_lines.append(f"        auth_basic_user_file /etc/nginx/basic-auth/{app_name}.htpasswd;")
+
+        # Add the rest of the location block
+        location_lines.extend([
+            f"        rewrite ^/{app_name}/(.*)$ /$1 break;",  # Strip /{app_name} prefix
+            f"        proxy_pass http://{app_name}:{port};",
+            f"        proxy_set_header Host $host;",
+            f"        proxy_set_header X-Real-IP $remote_addr;",
+            f"        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;",
+            f"        proxy_set_header X-Forwarded-Proto $scheme;",
+            f"    }}\n"
+        ])
+
+        # Add the location block to the config
+        conf += "\n" + "\n".join(location_lines)
+
     # Close the server block
     conf += "\n}"
 
     # Write the configuration to a file
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
     with open(output_file, 'w') as f:
         f.write(conf)
 
